@@ -72,12 +72,12 @@
   background-color: #2a3647;
   flex-shrink: 0;
 
-  >img {
+  > img {
     width: 54px;
     height: 66px;
   }
 
-  >p:nth-child(2) {
+  > p:nth-child(2) {
     font-size: 61px;
     font-weight: 400px;
     color: #ffffff;
@@ -85,7 +85,7 @@
     margin-top: 10px;
   }
 
-  >p:nth-child(3) {
+  > p:nth-child(3) {
     font-size: 24px;
     font-weight: 400px;
     color: #ffffff;
@@ -143,6 +143,9 @@
 }
 
 .rightFrame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   box-sizing: content-box;
   width: 400px;
   color: #000000;
@@ -285,8 +288,8 @@ p {
     background-color: $color-primary;
     position: relative;
     max-width: 400px;
-    max-height: 580px;
-    top: 290px;
+    max-height: 558px;
+    top: 380px;
     flex-direction: column;
   }
 
@@ -302,14 +305,14 @@ p {
     background-color: #2a3647;
     flex-shrink: 0;
 
-    >p:nth-child(2) {
+    > p:nth-child(2) {
       font-size: 48px;
       font-weight: 400px;
       color: #ffffff;
       margin: 0;
     }
 
-    >img {
+    > img {
       display: none;
     }
   }
@@ -344,6 +347,9 @@ p {
   }
 
   .rightFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-sizing: content-box;
     max-width: 400px;
     width: 100%;
@@ -370,8 +376,8 @@ p {
   .avatar {
     position: absolute;
     top: 143px;
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     border-radius: 100%;
     color: white;
     display: flex;
@@ -383,5 +389,13 @@ p {
 
   .cancelBtn {
     display: none;
+  }
+  .input_wrapper {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 375px) and (max-height: 667px) {
+  .add_dialog_wrapper {
+    top: 290px;
   }
 }

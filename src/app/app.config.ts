@@ -13,7 +13,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 /**
  * Global application configuration.
- * 
+ *
  * Provides:
  * - **Router configuration**: Uses `routes` from `app.routes.ts`.
  * - **Firebase services**: Initializes Firebase App and Firestore.
@@ -24,12 +24,12 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes), // Configures application routing
     provideFirebaseApp(() =>
       initializeApp({
-        projectId: 'join-68f95',
-        appId: '1:378653092670:web:7a001b250209e8f3abda6f',
-        storageBucket: 'join-68f95.firebasestorage.app',
-        apiKey: 'AIzaSyBL8izQfHbRN7EjrpWck12XccJxEZkwFUs',
-        authDomain: 'join-68f95.firebaseapp.com',
-        messagingSenderId: '378653092670',
+        projectId: 'join-2f52c',
+        appId: '1:91743585065:web:4f719db68c95445fb76d38',
+        storageBucket: 'join-2f52c.firebasestorage.app',
+        apiKey: 'AIzaSyAdJWobVs7-ygstomwN4pZXFhXU_XWqIhA',
+        authDomain: 'join-2f52c.firebaseapp.com',
+        messagingSenderId: '91743585065',
       })
     ), // Initializes Firebase with project credentials
     provideFirestore(() => getFirestore()), // Provides Firestore database

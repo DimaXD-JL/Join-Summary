@@ -20,10 +20,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  imports: [FormsModule, CommonModule]
+  imports: [FormsModule, CommonModule],
 })
 export class LoginComponent {
-  constructor(private router: Router) { } // Router instance for navigation.
+  constructor(private router: Router) {} // Router instance for navigation.
   authService = inject(AuthService); // AuthService instance used to perform authentication actions.
   email = ''; // User-provided email input.
   password = ''; //User-provided password input.
@@ -39,10 +39,10 @@ export class LoginComponent {
 
   /**
    * Attempts to authenticate the user with the provided email and password.
-   * 
-   * If either field is empty, it sets an appropriate error message. 
-   * Otherwise, it calls the AuthService to log in. 
-   * Upon success, navigates to the "summary" route. 
+   *
+   * If either field is empty, it sets an appropriate error message.
+   * Otherwise, it calls the AuthService to log in.
+   * Upon success, navigates to the "summary" route.
    * Sets the generalError property if login fails.
    */
 
@@ -64,7 +64,6 @@ export class LoginComponent {
       this.passwordError = 'Password is required.';
     }
     if (this.emailError || this.passwordError) {
-
     }
 
     try {
@@ -84,12 +83,12 @@ export class LoginComponent {
    * Fills the email and password fields with pre-defined guest credentials.
    */
   guestLogin() {
-    this.email = 'michaelspari@gmx.de';
+    this.email = 'max@mustermann.de';
     this.password = 'gast123';
   }
 
   /**
-   * Validates the current email value. 
+   * Validates the current email value.
    * Sets an error message if the email is empty or doesn't match the pattern.
    */
   validateEmail() {
@@ -103,7 +102,7 @@ export class LoginComponent {
   }
 
   /**
-   * Validates the current password value. 
+   * Validates the current password value.
    * Sets an error message if the password is empty.
    */
   validatePassword() {

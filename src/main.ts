@@ -14,7 +14,7 @@ import { routes } from './app/app.routes';
 
 /**
  * Initializes and starts the Angular application.
- * 
+ *
  * Configures:
  * - Angular Router with predefined routes
  * - Animation support for Angular components
@@ -27,14 +27,16 @@ bootstrapApplication(AppComponent, {
     provideRouter(routes), // Sets up the application routing
     provideAnimations(), // Enables Angular animations
     provideFirestore(() => getFirestore()), // Provides Firestore database
-    provideFirebaseApp(() => initializeApp({
-      apiKey: "AIzaSyBL8izQfHbRN7EjrpWck12XccJxEZkwFUs",
-      authDomain: "join-68f95.firebaseapp.com",
-      projectId: "join-68f95",
-      storageBucket: "join-68f95.firebasestorage.app",
-      messagingSenderId: "378653092670",
-      appId: "1:378653092670:web:dcff05e4c6a7828aabda6f"
-    })), // Initializes Firebase app with project credentials
-    provideAuth(() => getAuth()) // Provides Firebase authentication services
-  ]
-}).catch(err => console.error(err)); // Handles errors if the application fails to start
+    provideFirebaseApp(() =>
+      initializeApp({
+        apiKey: 'AIzaSyAdJWobVs7-ygstomwN4pZXFhXU_XWqIhA',
+        authDomain: 'join-2f52c.firebaseapp.com',
+        projectId: 'join-2f52c',
+        storageBucket: 'join-2f52c.firebasestorage.app',
+        messagingSenderId: '91743585065',
+        appId: '1:91743585065:web:4f719db68c95445fb76d38',
+      })
+    ), // Initializes Firebase app with project credentials
+    provideAuth(() => getAuth()), // Provides Firebase authentication services
+  ],
+}).catch((err) => console.error(err)); // Handles errors if the application fails to start
